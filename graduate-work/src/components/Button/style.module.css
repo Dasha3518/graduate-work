@@ -1,0 +1,25 @@
+.primary {
+    width: 372px;
+    height: 89.85px;
+    background: #F05334;
+    border-radius: 80px;
+    border: none;
+
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+
+    color: #F9E2DA;
+}
+
+.primary:hover{
+    background: #D13313;
+}
+
+.primary:active{
+    background: rgba(255, 46, 5, 0.96);
+    filter: blur(1px);
+}
