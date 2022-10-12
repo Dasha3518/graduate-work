@@ -1,6 +1,6 @@
 import style from  './style.module.css';
 
-type ButtonColorType = 'primary' | 'transparent' | 'footerbutton'; 
+type ButtonColorType = 'primary' | 'transparent' | 'footerbutton' | 'transparentPing'; 
 interface Props {
     text?: string;
     onClick?: () => void;
@@ -17,6 +17,9 @@ const getButtonStyle = (type: ButtonColorType) => {
     }
     if (type === 'footerbutton') {
         return style.footerbutton;
+    }
+    if (type === 'transparentPing') {
+        return style.transparentPing;
     }
 }
 

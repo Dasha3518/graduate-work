@@ -70,3 +70,23 @@ border: none;
 .footerbutton:hover{
     background: #ecda39;
 }
+
+.transparentPing{
+    width: 372px;
+    height: 89.85px;
+    border-radius: 80px;
+    background: #FDC0AA;
+    border: 4px solid #F05334;;
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+
+    color: #F05334;
+    margin: 0 auto;
+}
+.transparentPing:hover{
+    border: 8px solid #F05334;
+}

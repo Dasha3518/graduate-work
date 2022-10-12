@@ -15,10 +15,16 @@ import citrus from './images/citrus.svg'
 import vector from './images/Vector.png'
 import vectororange from './images/vectororange.png'
 import profile from './images/profile.svg'
+import bottle1 from './images/bottle1.svg'
+import bottle2 from './images/bottle2.svg'
+import bottle3 from './images/bottle3.svg'
+import bottle4 from './images/bottle4.svg'
+import card from './images/card.svg'
 
 
 export {
     logopic, ico, basket, bottle, grapefruit,
     blogbottle, line, jumji, peachy, lemon, orange,
-    lemonad, enjoy, citrus, vector, vectororange, profile
+    lemonad, enjoy, citrus, vector, vectororange, profile,
+    bottle1, bottle2, bottle3, bottle4, card
 };

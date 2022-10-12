@@ -1,0 +1,70 @@
+.packsshop {
+    width: 100%;
+    background: #FDC0AA;
+    /* height: 1200px; */
+}
+.container {
+    height: 100%;
+    width: 1569px;
+    margin: 0 auto;
+    padding: 50px 15px;
+}
+.packssopTitle{
+height: 105px;
+
+font-family: 'Maven Pro';
+font-style: normal;
+font-weight: 900;
+font-size: 60px;
+line-height: 35px;
+text-align: center;
+color: #F05334;
+}
+.packssopText{
+height: 152px;
+
+font-family: 'Maven Pro';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 35px;
+text-align: center;
+color: #F05334;
+}
+.packsshopBottle{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+.packsshopBottle img {
+    width: 80%;
+}
+.packsshopBottle h3{
+    font-family: 'Maven Pro';
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 50px;
+text-align: center;
+color: #F05334;
+margin-bottom: 20px;
+width: 383px;
+height: 53px;
+}
+.packsshopBottle h5{
+    font-family: 'Maven Pro';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 43px;
+text-align: center;
+color: #F05334;
+width: 383px;
+height: 141px;
+}
+.card{
+    padding-top: 128px;
+}
+
+.card h3 {
+    margin-bottom: 100px;
+}

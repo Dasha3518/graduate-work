@@ -1,5 +1,5 @@
-import style from  './style.module.css';
-import { blogbottle, line, jumji, peachy, orange, lemon, lemonad, enjoy} from '../../assets';
+import style from './style.module.css';
+import { blogbottle, line} from '../../assets';
 import { Button } from '../Button';
 
 export const DietJuice = () => {

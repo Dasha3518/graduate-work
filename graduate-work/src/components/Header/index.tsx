@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ico, logopic } from '../../assets';
 import style from  './style.module.css';
 
@@ -8,10 +9,10 @@ export const Header = () => {
             <div className={style.container}>
                 <ul className={style.pagelist}>
                     <li>
-                        <a href="#">Shop</a>
+                        <Link to='/shop'>Shop</Link>
                     </li>
                     <li>
-                        <a href="#">Learn</a>
+                        <Link to='/info'>Learn</Link>
                     </li>
                 </ul>
                 <div className={style.logo}>
