@@ -1,0 +1,34 @@
+.form {
+    width: 510px;
+    height: 75px;
+    background: #E9E9E9;
+    border-radius: 90px;
+    font-size: 35px;
+    padding-left: 15px;
+    color: #F05334;
+    border-color: #F05334;
+
+    outline: 0;
+    outline-offset: 0;
+}
+
+.footerinput{
+    outline: 0;
+    outline-offset: 0;
+    padding-left: 15px;
+    width: 423px;
+    height: 98px;
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    border-radius: 90px;
+    border:2px solid #F05334;
+    color: #F05334;
+    background: #E9E9E9;
+    border-radius: 80px;
+    margin-right: 10px;
+
+}
+

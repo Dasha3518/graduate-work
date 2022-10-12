@@ -1,0 +1,72 @@
+.primary {
+    width: 372px;
+    height: 89.85px;
+    background: #F05334;
+    border-radius: 80px;
+    border: none;
+
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+
+    color: #F9E2DA;
+}
+
+.primary:hover{
+    background: #D13313;
+}
+
+.primary:active{
+    background: rgba(255, 46, 5, 0.96);
+    filter: blur(1px);
+}
+
+.transparent{
+    width: 372px;
+    height: 89.85px;
+    border-radius: 80px;
+    background: #F2DB99;
+    border: 4px solid #F05334;;
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+
+    color: #F05334;;
+    margin: 0 auto;
+}
+
+.transparent:hover{
+    background: #F05334;
+    color: #F2DB99;
+}
+.transparent:active{
+    background: #D13313;
+}
+
+.footerbutton{
+    width: 308px;
+height: 98px;
+
+background: #E9DC61;
+border-radius: 80px;
+
+font-family: 'Maven Pro';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 38px;
+text-align: center;
+
+color: #F05334;
+border: none;
+}
+
+.footerbutton:hover{
+    background: #ecda39;
+}
