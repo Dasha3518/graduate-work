@@ -1,7 +1,7 @@
 import { ChangeEventHandler } from 'react';
 import styles from './style.module.css';
 
-type InputColorType = 'form'; 
+type InputColorType = 'form'| 'footerinput'; 
 interface Input {
     value?: string;
     placeholder?: string;
@@ -12,6 +12,9 @@ interface Input {
 const getInputStyle =(type: InputColorType) => {
     if (type === 'form'){
         return styles.form;
+    }
+    if (type === 'footerinput'){
+        return styles.footerinput;
     }
 }
 

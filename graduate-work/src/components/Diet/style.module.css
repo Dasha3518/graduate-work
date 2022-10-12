@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.blogDiet, .blogEnjoy {
+    height: 970px;
+    background: #F2DB99;
+    width: 100%;
+}
+.container {
+    height: 100%;
+    width: 1569px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.blogInformation{
+    width: 440px;
+    text-align: inherit;
+    padding-top: 95px;
+}
+.blogContent{
+    display: flex;
+}
+.blogTitle{
+    width: 793px;
+    height: 332px;
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 113px;
+    color: #F05334;
+    margin-bottom: 45px;
+}
+
+.blogText{
+    width: 661px;
+height: 312px;
+
+font-family: 'Maven Pro';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 30px;
+/* or 125% */
+
+letter-spacing: 0.05em;
+
+color: #F05334;
+}
+.blogBottle{
+    width: 829px;
+}
+.bottle{
+    position: absolute;
+    top: 276px;
+}
+.line{
+    position: absolute;
+    left: 527px;
+    top: 358px;
+}
+.blogButton{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+
