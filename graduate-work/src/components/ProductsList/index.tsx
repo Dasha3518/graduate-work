@@ -13,21 +13,7 @@ interface IProps {
     products:IProducts[];
 }
 
-// type Tabs = "all" | "selected" ;
-
-// export const getTabList = (tab: Tabs) => {
-//   if (tab === "all") {
-//     return <ProductsItem title={""} text={""} />;
-//   }
-
-//   if (tab === "selected") {
-//     return <Basket />;
-//   }
-
-// };
-
 export const ProductsList = (props: IProps) =>{
-    // const [selectedTab, setSelectedTab] = useState<Tabs>("all");
 
 const singleProducts = [
     {

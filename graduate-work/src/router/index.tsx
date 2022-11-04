@@ -6,6 +6,7 @@ import { Shop } from "../pages/Shop";
 import { Login } from "../pages/Login";
 import { Registration } from "../pages/Registration";
 import { BasketPage } from "../pages/BasketPage";
+import { RegistrationSuccess } from "../pages/RegistrationSuccess";
 
 export const RootRouter = () => {
     return (
@@ -16,6 +17,7 @@ export const RootRouter = () => {
         <Route path="/login" element={<Login/>}/>
         <Route path="/registration" element={<Registration/>}/>
         <Route path="/basketpage" element={<BasketPage/>}/>
+        <Route path="/registrationsuccess" element={<RegistrationSuccess/>}/>
     </Routes>
     )
 }

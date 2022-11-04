@@ -2,19 +2,20 @@ import style from  './style.module.css';
 import { Input } from "../Input"
 import { ChangeEventHandler, useState } from "react";
 import { Button } from '../Button';
-import { validateConfirmPassword, validateEmail, validateRequired } from '../../utils/validation';
+import { validateConfirmPassword, validateEmail, validatePassword, validateRequired } from '../../utils/validation';
 import { registerUser } from '../../api/auth';
+import { useNavigate } from 'react-router-dom';
 
 export const RegistrationForm = () => {
-
+    const [userName, setUserName] = useState("");
+    const [userNameError, setUserNameError] = useState("");
     const [email, setEmail] = useState("");
     const [emailError, setEmailError] = useState("");
     const [password, setPassword] = useState("");
     const [passwordError, setPasswordError] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [confirmPasswordError, setConfirmPasswordError] = useState("");
-    const [userName, setUserName] = useState("");
-    const [userNameError, setUserNameError] = useState("");
+    const navigate = useNavigate();
     const [error, setError] = useState('');
 
     const handleEmail: ChangeEventHandler<HTMLInputElement> = (event) => {
@@ -54,8 +55,45 @@ export const RegistrationForm = () => {
     
         setUserName(event.target.value);
     };
+
+    const handleEmailBlur = () => {
+        const error = validateEmail(email);
+        setEmailError(error);
+    };
+
+    const handleEmailFocus = () => {
+        setEmailError('')
+    };
+
+    const handleUserNamelBlur = () => {
+        const error = validateRequired(userName);
+        setUserNameError(error);
+    };
+
+    const handleUserNamelFocus = () => {
+        setUserNameError("");
+    };
+
+    const handlePasswordlBlur = () => {
+        const error = validatePassword(password);
+        setPasswordError(error);
+    };
+
+    const handlePasswordlFocus = () => {
+        setPasswordError("");
+    };
+
+    const handleConfirmlBlur = () => {
+        const error = validateConfirmPassword(confirmPassword, password);
+        setConfirmPasswordError(error);
+    };
+
+    const handleConfirmlFocus = () => {
+        setConfirmPasswordError("");
+    };
+
         
-    const onClickLogin = () => {
+    const onClickRegistration = () => {
         setError("");
 
         const errors = {
@@ -65,17 +103,7 @@ export const RegistrationForm = () => {
             confirm: validateConfirmPassword(password, confirmPassword)
         };
 
-        const isValifForm = Object.values(errors).every((error) => error === '' );
-
-        if(isValifForm){
-
-        }
-        setUserNameError(errors.user);
-        setEmailError(errors.email);
-        setPasswordError(errors.password);
-        setConfirmPasswordError(errors.confirm);
-        
-    const isValidForm = Object.values(errors).every((error) => error === "");
+        const isValidForm = Object.values(errors).every((error) => error === '' );
 
         if (isValidForm) {
         const promise = registerUser(userName, email, password);
@@ -93,10 +121,10 @@ export const RegistrationForm = () => {
             })
             .then((json) => {
             if (isOk) {
-                // navigate("/register-success");
+                navigate("/registrationsuccess");
             } else {
                 if (json?.email?.includes("user with this Email already exists.")) {
-                setError("Пользователь с таким email уже существует");
+                setError("User with this email already exists");
                 return;
                 }
                 if (
@@ -104,27 +132,28 @@ export const RegistrationForm = () => {
                     "A user with that username already exists."
                 )
                 ) {
-                setError("Пользователь с таким username уже существует");
+                setError("A user with this username already exists");
                 return;
                 }
-
-            //обработка пороля
-            // "This password is too short. It must contain at least 8 characters."
-            // "This password is too common."
-            // "This password is entirely numeric."
+                if (
+                    json?.password?.includes(
+                        "This password is too short. It must contain at least 6 characters."
+                        )
+                ) {
+                    setError(
+                    "Password must contain at least 6 characters"
+                    );
+                    return;
+                }
+                if (json?.password?.includes("This password is too simple, change it")) {
+                    setError("This password is too simple, change it");
+                    return;
+                }
             }
         });
     }
     };
-        const handleEmailBlur = () => {
-            const error = validateEmail(email);
 
-            setEmailError(error);
-        }
-
-        const handleEmailFocus = () => {
-            setEmailError('')
-        }
 
     return (
         <div className={style.back}>
@@ -136,7 +165,10 @@ export const RegistrationForm = () => {
                             value={userName} 
                             onChange={handleUserName} 
                             type='form'
-                            error={userNameError} />
+                            error={userNameError}
+                            placeholder="User Name"
+                            onBlur={handleUserNamelBlur}
+                            onFocus={handleUserNamelFocus} />
                     </div>
                     <div className={style.inputBlog}>
                         <p className={style.inputText}>Email</p>
@@ -144,6 +176,7 @@ export const RegistrationForm = () => {
                             value={email} 
                             onChange={handleEmail} 
                             type='form' 
+                            placeholder='Email'
                             onBlur={handleEmailBlur}
                             onFocus={handleEmailFocus}
                             error={emailError}/>
@@ -154,6 +187,9 @@ export const RegistrationForm = () => {
                             value={password} 
                             onChange={handlePassword} 
                             type='form'
+                            placeholder="Password"
+                            onBlur={handlePasswordlBlur}
+                            onFocus={handlePasswordlFocus}
                             error={passwordError}/>
                     </div>
                     <div className={style.inputBlog}>
@@ -162,12 +198,15 @@ export const RegistrationForm = () => {
                             value={confirmPassword} 
                             onChange={handleConfirmPassword} 
                             type='form'
-                            error={confirmPasswordError}/>
+                            placeholder="Confirm Password"
+                            error={confirmPasswordError}
+                            onBlur={handleConfirmlBlur}
+                            onFocus={handleConfirmlFocus}/>
                     </div>
                 <Button 
                     type="primary" 
-                    onClick={onClickLogin} 
-                    text={"Сonfirm"} />
+                    onClick={onClickRegistration} 
+                    text={"Registration"} />
                 </div>
         </div>
         </div>
