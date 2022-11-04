@@ -1,0 +1,42 @@
+.container {
+    height: 2000px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.active_link {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 145.2%;
+    letter-spacing: 0.03em;
+    color: #F05334;
+    width: 130px;
+    padding: 40px;
+
+}
+.normal {
+    color: #f0533463;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 145.2%;
+    letter-spacing: 0.03em;
+    width: 250px;
+    padding: 40px;
+}
+.wand {
+    font-size: 45px;
+    display: contents;
+    margin-bottom: 50px;
+    color: #f053345e;
+} 
+.loginpage{
+    background: #f2db998f;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

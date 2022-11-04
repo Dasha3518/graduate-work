@@ -6,46 +6,49 @@
 .main {
     width: 100%;
     background: #FDC0AA;
-    height: 1200px;
+    height: 1014px;
 }
 .container {
     height: 100%;
-    width: 1569px;
+    width: 1200px;
     display: flex;
     margin: 0 auto;
-    padding: 50px 15px;
+    position: relative;
 }
 .grapefruit{
-    width: 764px;
-    height: 951px;
+    width: 100%;
+    height: 870px;
+    padding-bottom: 100px;
 }
-.main__banner{
-    width: 833px;
-height: 399px;
-
-font-family: 'Merienda One';
-font-style: normal;
-font-weight: 400;
-font-size: 85px;
-line-height: 121.4%;
-/* or 103px */
-
-padding-top: 90px;
-color: #F05334;
+.main__banner {
+    width: 850px;
+    height: 399px;
+    font-family: 'Merienda One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 131.4%;
+    padding-top: 27px;
+    color: #F05334;
 }
 .main__title{
     margin-bottom: 50px;
+    padding-top: 100px;
 }
 
 .main__text{
     font-weight: 400;
 font-size: 27px;
 line-height: 121.4%;
-margin-bottom: 145px;
+margin-bottom: 65px;
 }
 
 .bottle{
     position: absolute;
     transform: rotate(-0.44deg);
-    top: 300px;
+
+    bottom: 0px
+}
+.main button {
+    z-index: 3;
 }

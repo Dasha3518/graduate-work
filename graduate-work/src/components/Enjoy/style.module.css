@@ -5,8 +5,8 @@
     box-sizing: border-box;
 }
 .container {
-    height: 100%;
-    width: 1569px;
+    height: 82%;
+    width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -26,8 +26,8 @@
     font-family: 'Maven Pro';
     font-style: normal;
     font-weight: 900;
-    font-size: 28px;
-    line-height: 38px;
+    font-size: 24px;
+    line-height: 36px;
     text-align: justify;
     color: #F05334;
 }
@@ -37,7 +37,7 @@ height: 200px;
 font-family: 'Maven Pro';
 font-style: normal;
 font-weight: 900;
-font-size: 96px;
+font-size: 86px;
 line-height: 113px;
 text-align: right;
 padding-right: 48px;
@@ -45,14 +45,17 @@ color: #F05334;
 }
 .lemonad{
     margin-bottom: 80px;
-    width: 563px;
-height: 841px;
+    width: 574px;
+    height: 682px;
 }
+
 .blogEnjoyButton{
     text-align: center;
 }
 .enjoy{
     margin-bottom: 80px;
+    width: 649px;
+    height: 489px;
 }
 .citrus{
     width: 100%;

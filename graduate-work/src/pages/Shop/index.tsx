@@ -1,12 +1,16 @@
 import { Footer } from "../../components/Footer"
 import { Header } from "../../components/Header"
-import { Packsshop } from "../../components/Packsshop"
+import { Olipop } from "../../components/Olipop"
+import { PacksShop } from "../../components/Packsshop"
+import { Single } from "../../components/Single"
 
 export const Shop= () => {
     return(
     <>
         <Header/>
-        <Packsshop/>
+        <PacksShop/>
+        <Single/>
+        <Olipop/>
         <Footer/>
     </>
     )

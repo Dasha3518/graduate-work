@@ -1,16 +1,10 @@
 .container {
     height: 100%;
-    width: 1569px;
+    width: 1200px;
 
     margin: 0 auto;
     padding: 0 15px;
 }
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 .blogSambler{
     text-align: center;
         background: #F9E2DA;
@@ -31,13 +25,13 @@
         text-align: left;
         font-family: 'Maven Pro';
     font-style: normal;
-    width: 800px;
+    width: 510px;
     }
     .blogSamblerTextFruits{
         font-weight: 400;
         font-family: 'Maven Pro';
     font-style: normal;
-        font-size: 24px;
+        font-size: 22px;
         line-height: 32px;
         margin-bottom: 50px;
         text-align: center;
@@ -45,10 +39,21 @@
     .blogHealthyTitle{
         padding-top: 110px;
     font-weight: 900;
-    font-size: 96px;
+    font-size: 84px;
     line-height: 58px;
     margin-bottom: 50px;
     }
-    .peachy, .girls{
+    /* .peachy, .girls{
         margin-right: 35px;
+    } */
+    .peachy{
+        width: 500px;
+        height: 790px;;
+        margin-right: 40px;
+        margin-bottom: 50px;
+    }
+    .girls{
+        width: 279px;
+        height: 309px;
+        padding-right: 20px;
     }

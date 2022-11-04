@@ -6,6 +6,7 @@ interface Props {
     onClick?: () => void;
     disabled?: boolean;
     type: ButtonColorType; 
+    btnType?: "button" | "submit" | "reset" | undefined;
 }
 
 const getButtonStyle = (type: ButtonColorType) => {

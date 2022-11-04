@@ -11,7 +11,7 @@
 }
 .container {
     height: 100%;
-    width: 1569px;
+    width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -29,20 +29,20 @@
     font-family: 'Maven Pro';
     font-style: normal;
     font-weight: 700;
-    font-size: 96px;
+    font-size: 86px;
     line-height: 113px;
     color: #F05334;
     margin-bottom: 45px;
 }
 
 .blogText{
-    width: 661px;
+    width: 600px;
 height: 312px;
 
 font-family: 'Maven Pro';
 font-style: normal;
 font-weight: 400;
-font-size: 24px;
+font-size: 21px;
 line-height: 30px;
 /* or 125% */
 
@@ -51,7 +51,7 @@ letter-spacing: 0.05em;
 color: #F05334;
 }
 .blogBottle{
-    width: 829px;
+    width: 629px;
 }
 .bottle{
     position: absolute;
@@ -59,8 +59,10 @@ color: #F05334;
 }
 .line{
     position: absolute;
-    left: 527px;
-    top: 358px;
+    left: 615px;
+    top: 417px;
+    width: 334.31px;
+    height: 301.06px;
 }
 .blogButton{
     width: 100%;

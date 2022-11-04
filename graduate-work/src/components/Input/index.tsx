@@ -3,11 +3,20 @@ import styles from './style.module.css';
 
 type InputColorType = 'form'| 'footerinput'; 
 interface Input {
-    value?: string;
-    placeholder?: string;
-    onChange?: ChangeEventHandler<HTMLInputElement>;
-    type: InputColorType; 
-}
+        value?: string;
+        placeholder?: string;
+        refObj?: any;
+        onChange?: ChangeEventHandler<HTMLInputElement>;
+        onFocus?: () => void;
+        onBlur?: () => void;
+        error?: string;
+        name?: string;
+        required?: boolean;
+        pattern?: string;
+        type: InputColorType;
+        minLength?: number;
+        maxLength?: number;
+    }
 
 const getInputStyle =(type: InputColorType) => {
     if (type === 'form'){
@@ -20,11 +29,24 @@ const getInputStyle =(type: InputColorType) => {
 
 export const Input = (props: Input) => {
     return (
-        <input
-            className={`${styles.input} ${getInputStyle(props.type)}`}
-            value={props.value}  
-            placeholder={props.placeholder}
-            onChange={props.onChange}> 
-        </input>
+        <label>
+            <input
+                ref={props.refObj}
+                className={`${styles.input} ${getInputStyle(props.type)} ${
+                    props.error ? styles.error : ""
+                    }`}
+                value={props.value}
+                placeholder={props.placeholder}
+                onChange={props.onChange}
+                onFocus={props.onFocus}
+                required={props.required}
+                name={props.name}
+                pattern={props.pattern}
+                type={props.type}
+                minLength={props.minLength}
+                maxLength={props.maxLength}
+            ></input>
+            <p style={{ color: "red" }}>{props.error}</p>
+        </label>
         );
 };
