@@ -2,6 +2,7 @@ import style from  './style.module.css';
 import { bottle1, card,bottle2,bottle3,bottle4  } from '../../assets';
 import { Button } from '../Button';
 
+
 export const PacksShop = () => {
     return(
         <div className={style.packsshop}>

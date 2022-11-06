@@ -24,21 +24,17 @@ export const activateUser = (uid: string, token: string) => {
         headers: {
         "Content-Type": "application/json",
         },
-    }).then((response) => {
-        return response.json();
-    });
+    })
 };
 
 export const login = (email:string, password:string) => {
-    return fetch("https://studapi.teachmeskills.by/auth/auth/jwt/create/", {
+    return fetch("https://studapi.teachmeskills.by/auth/jwt/create/", {
         method: "POST",
         body: JSON.stringify({ email, password }),
         headers: {
         "Content-Type": "application/json",
         },
-    }).then((response) => {
-        return response.json();
-    });
+    })
 }
 
 export const getUser = () => {
