@@ -100,10 +100,6 @@ export const LoginForm = () => {
     
         const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
         event.preventDefault();
-        //option
-        // console.log(refEmail?.current?.value, refEmail?.current?.value);
-        // email = refEmail?.current?.value
-        // password = refPassord?.current?.value
         const formData = new FormData(event?.target as any);
         const obj = Object.fromEntries(Array.from(formData.entries()));
         const email: string = obj.email as string;
@@ -144,10 +140,9 @@ export const LoginForm = () => {
                                     );
                                     return;
                                         }
-                                     }
-                                 });
-                             }
-                         
+                                    }
+                                });
+                            }
 
     return (
         <form className={style.back} onSubmit={handleSubmit}>

@@ -58,6 +58,10 @@ color: #F05334;
 width: 383px;
 height: 141px;
 }
+/* .packsshopBottle{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+} */
 .card{
     padding-top: 128px;
 }

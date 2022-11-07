@@ -3,8 +3,8 @@ import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import { RootRouter } from './router';
 import { createContext, useState } from 'react';
-import { store } from './redux/store';
 import { Provider } from 'react-redux';
+import store from './utils/store';
 
 // export const Context = createContext<{
 //   isDark: boolean;

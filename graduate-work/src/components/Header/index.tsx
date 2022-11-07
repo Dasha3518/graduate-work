@@ -41,7 +41,7 @@ export const Header = () => {
                     <img src={ico} alt="ico"/>
                 </button>
                 </div>
-                <Link to='/basketpage'><img src={basket} alt="basket"/></Link>
+                <Link to='/cartpage'><img src={basket} alt="basket"/></Link>
             </div>
         </header>
         </div>
