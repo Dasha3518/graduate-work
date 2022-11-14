@@ -4,16 +4,13 @@
     box-sizing: border-box;
 }
 
-.blogDiet, .blogEnjoy {
+.blogDiet{
     height: 970px;
     background: #F2DB99;
     width: 100%;
-}
-.container {
-    height: 100%;
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    font-family: 'Maven Pro';
+    font-style: normal;
+    color: #F05334;
 }
 .blogInformation{
     width: 440px;
@@ -24,43 +21,35 @@
     display: flex;
 }
 .blogTitle{
-    width: 793px;
+    width: 555px;
     height: 332px;
-    font-family: 'Maven Pro';
-    font-style: normal;
     font-weight: 700;
     font-size: 86px;
     line-height: 113px;
-    color: #F05334;
     margin-bottom: 45px;
 }
 
 .blogText{
-    width: 600px;
-height: 312px;
+    width: 520px;
+    height: 312px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
 
-font-family: 'Maven Pro';
-font-style: normal;
-font-weight: 400;
-font-size: 21px;
-line-height: 30px;
-/* or 125% */
-
-letter-spacing: 0.05em;
-
-color: #F05334;
 }
 .blogBottle{
     width: 629px;
+    position: relative;
 }
 .bottle{
     position: absolute;
-    top: 276px;
+    top: 116px;
 }
 .line{
     position: absolute;
-    left: 615px;
-    top: 417px;
+    left: 260px;
+    top: 250px;
     width: 334.31px;
     height: 301.06px;
 }

@@ -1,9 +1,11 @@
+import { MouseEventHandler } from 'react';
 import style from  './style.module.css';
 
-type ButtonColorType = 'primary' | 'transparent' | 'footerbutton' | 'transparentPing'; 
+type ButtonColorType = 'primary' | 'transparent' | 'footerbutton' | 'transparentPing' | 'logout'; 
 interface Props {
     text?: string;
-    onClick?: () => void;
+    onClick: MouseEventHandler<HTMLButtonElement>;
+    //onClick?: () => void;
     disabled?: boolean;
     type: ButtonColorType; 
     btnType?: "button" | "submit" | "reset" | undefined;
@@ -21,6 +23,9 @@ const getButtonStyle = (type: ButtonColorType) => {
     }
     if (type === 'transparentPing') {
         return style.transparentPing;
+    }
+    if (type === 'logout') {
+        return style.logout
     }
 }
 

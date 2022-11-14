@@ -13,7 +13,6 @@ import enjoy from './images/enjoy.png';
 import lemonad from './images/lemonad.svg';
 import citrus from './images/citrus.svg';
 import vector from './images/Vector.png';
-import vectororange from './images/vectororange.png';
 import profile from './images/profile.svg';
 import bottle1 from './images/bottle1.png';
 import bottle2 from './images/bottle2.png';
@@ -30,12 +29,15 @@ import iconsingle from './images/iconsingle.png'
 import olipopvector from './images/olipopvector.png'
 import seller from './images/seller.png'
 import cross from './images/cross.png'
+import icocomment from './images/icocomment.png'
+import logoutpic from './images/exit.png'
 
 export {
     logopic, ico, basket, bottle, grapefruit,
     blogbottle, line, jumji, peachy, lemon, orange,
-    lemonad, enjoy, citrus, vector, vectororange, profile,
+    lemonad, enjoy, citrus, vector, profile,
     bottle1, bottle2, bottle3, bottle4, card, tropicalgrepefruit,
     vintagepineapple, orangecream, grepefruiftvanilla, gingerlemon,
-    classiclime, iconsingle, olipopvector, seller,cross, 
+    classiclime, iconsingle, olipopvector, seller,cross, icocomment,
+    logoutpic
 };

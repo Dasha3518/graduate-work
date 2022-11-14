@@ -186,7 +186,7 @@ export const RegistrationForm = () => {
                         <Input 
                             value={password} 
                             onChange={handlePassword} 
-                            type='form'
+                            type='password'
                             placeholder="Password"
                             onBlur={handlePasswordlBlur}
                             onFocus={handlePasswordlFocus}
@@ -197,7 +197,7 @@ export const RegistrationForm = () => {
                         <Input 
                             value={confirmPassword} 
                             onChange={handleConfirmPassword} 
-                            type='form'
+                            type='password'
                             placeholder="Confirm Password"
                             error={confirmPasswordError}
                             onBlur={handleConfirmlBlur}
@@ -206,8 +206,10 @@ export const RegistrationForm = () => {
                 <Button 
                     type="primary" 
                     onClick={onClickRegistration} 
-                    text={"Registration"} />
-                </div>
+                    text={"Registration"} 
+                />
+                <p>{error}</p>
+            </div>
         </div>
         </div>
     )

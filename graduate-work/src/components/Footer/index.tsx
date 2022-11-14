@@ -68,8 +68,11 @@ export const Footer = () => {
                     </div>
                     <div>
                         <h4 className={style.sale}>Sign up to get 10% off your first order</h4>
-                        <Input onChange={handleOnChange} value={text} type='footerinput' placeholder='Email Address'/>
-                        <Button type="footerbutton" onClick={submit} text={"Subscribe"}/>
+                        <div className={style.form}>
+                            <Input onChange={handleOnChange} value={text} type='footerinput' placeholder='Email Address'/>
+                            <Button type="footerbutton" onClick={submit} text={"Subscribe"}/>
+                        </div>
+
                         <img src={profile} alt="" className={style.profile}/>
                     </div>
                 </div>

@@ -1,7 +1,9 @@
 .olipop {
     width: 100%;
     background: #F2DB99;
-    /* height: 1200px; */
+    color: #F05334;
+    font-family: 'Maven Pro';
+    font-style: normal;
 }
 .container {
     height: 100%;
@@ -13,43 +15,29 @@
 .olipopText h2{
     width: 644px;
     height: 226px;
-    
-    font-family: 'Maven Pro';
-    font-style: normal;
     font-weight: 700;
     font-size: 96px;
     line-height: 113px;
-    color: #F05334;
     margin-bottom: 40px;
 }
 .olipopText h5{
     width: 664px;
     height: 120px;
-    
-    font-family: 'Maven Pro';
-    font-style: normal;
     font-weight: 500;
-    font-size: 40px;
+    font-size: 35px;
     line-height: 60px;
-    color: #F05334;
     margin-bottom: 40px;
 }
-
 .olbottle {
     width: 610.08px;
-height: 806.33px;
+    height: 806.33px;
 }
 .seller{
     position: absolute;
-width: 249.52px;
-height: 249.52px;
-right: -78px;
+    width: 249.52px;
+    height: 249.52px;
+    right: -78px;
 }
 .olipopBottle{
     position: relative;
-}
-.vector{
-    width: 100%;
-    height: 257px;
-    position: absolute; 
 }

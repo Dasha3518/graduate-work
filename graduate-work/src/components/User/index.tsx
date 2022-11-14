@@ -2,7 +2,6 @@ import style from "./style.module.css";
 
 interface UserProps {
   username: string;
-  isDark: boolean;
 }
 export const Username = (props: UserProps) => {
   const initial = props.username.split(" ");

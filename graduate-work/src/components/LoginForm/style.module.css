@@ -37,3 +37,7 @@
     color: red;
     height: 20px;
 }
+.registrationBlog a{
+    width: 100%;
+    height: auto;
+}

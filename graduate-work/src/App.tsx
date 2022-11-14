@@ -1,36 +1,64 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import { RootRouter } from './router';
 import { createContext, useState } from 'react';
 import { Provider } from 'react-redux';
-import store from './utils/store';
+import store from './redux/store';
+import { IUser } from './types/auth';
+import { getUser } from './api/auth';
 
-// export const Context = createContext<{
-//   isDark: boolean;
-//   setIsDark: (value: boolean) => void;
-// }>({isDark: false, setIsDark: () => {} });
+
+
+
 export const Context = createContext<{
-  isDark: boolean;
-  setIsDark: (value: boolean) => void;
-  user:  null;
+  user:   IUser | null;
   setUser: (value:  null) => void;
 }>({
-  isDark: false,
-  setIsDark: () => {},
   user: null,
-  setUser: (value:  null) => {},
+  setUser: (value: IUser | null) => {},
 });
-
+const access = localStorage.getItem("access");
 
 function App() {
+  const [user, setUser] = useState<IUser | null>(null);
+  const [isReady, setIsReady] = useState(!access);
+  useEffect(() => {
+    let isOk = true;
+
+    if (access) {
+      getUser()
+        .then((response) => {
+          if (response.ok) {
+            isOk = true;
+          } else {
+            isOk = false;
+          }
+
+          return response.json(); //чёт ругается на неавторизованного пользователя, надо разобраться
+        })
+        .then((json) => {
+          if (isOk) {
+            setUser(json);
+          }
+        })
+        .finally(() => {
+          setIsReady(true);
+        });
+    }
+  }, []);
+
   return (
     <Provider store={store}>
-    <BrowserRouter>
-      <RootRouter/>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Context.Provider value={{ user: user,setUser: setUser }}>
+          <RootRouter/>
+        </Context.Provider>
+      </BrowserRouter>
     </Provider>
   );
 }
 
 export default App;
+
+

@@ -1,0 +1,69 @@
+.comment{
+    background: #F2DB99;
+    width: 100%;
+    padding-top: 50px;
+    background-image: url(../../assets/images/citrus.svg) ;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 65% 45%;
+}
+.comments{
+    background: #efeabe;
+    border-radius: 30px;
+    width: 700px;
+    margin-bottom: 50px;
+    padding: 20px;
+    overflow: auto;
+    height: 300px;
+    
+}
+.comments li{
+    text-decoration: none;
+    list-style-type: none;
+}
+.commentList{
+    border-bottom: 2px solid #d3c7c7;
+    display: grid;
+    padding: 10px;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 40% 60%;
+
+}
+.inputform{
+    height: 300px;
+    width: 100%;
+    border-radius: 30px;
+    padding: 10px;
+    background: #efeabe;
+}
+.inputform button {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 200;
+}
+.userlist{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    text-align: center;
+}
+.text{
+    grid-column: 2;
+}
+.username{
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 400;
+}

@@ -8,6 +8,8 @@
     width: 100%;
     height: 120px;
     background: #FDC0AA;
+    font-family: 'Maven Pro';
+    font-style: normal;
 }
 .container {
     height: 100%;
@@ -15,32 +17,27 @@
     display: flex;
     align-items: center;
     margin: 0 auto;
-    padding: 0 15px;
 }
-
 .pagelist {
     list-style-type: none;
-    font-family: 'Maven Pro';
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-display: flex;
-margin-right: 264px;
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    margin-right: 264px;
 }
-
 .logo{
-    margin-right: 350px; 
+    margin-right: 260px; 
 }
 
-a{
+header a{
     text-decoration: none;
     color: #F05334;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 115px;
-height: 41.36px;
-border-radius: 30px;
+    border-radius: 30px;
+    height: 50px;
 }
 li a:hover {
     background: #F05334;
@@ -50,4 +47,12 @@ li a:hover {
     border: none;
     background: none;
     cursor: pointer;
+}
+.total{
+    font-size: 20px;
+    padding-bottom: 32px;
+}
+header h2{
+    color: #F05334;
+    margin-right: 10px;
 }

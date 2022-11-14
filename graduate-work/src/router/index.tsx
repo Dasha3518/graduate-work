@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Navigate, Route, Routes } from "react-router-dom"
 import { Main } from "../pages/Main"
 import { Info } from "../pages/Info";
 import { Shop } from "../pages/Shop";
@@ -7,6 +7,12 @@ import { Registration } from "../pages/Registration";
 import { RegistrationSuccess } from "../pages/RegistrationSuccess";
 import { Activation } from "../pages/Activation";
 import { CartPage } from "../pages/CartPage/CartPage";
+import { ReactNode, useContext } from "react";
+import { Context } from "../App";
+import { MyOrderPage } from "../pages/MyOrders";
+import { ResetPassword } from "../pages/ResetPassword";
+import { ConfirmPassword } from "../pages/ConfirmPassword";
+
 
 export const RootRouter = () => {
     return (
@@ -14,11 +20,33 @@ export const RootRouter = () => {
         <Route path="/" element={<Main />} />
         <Route path="/info" element={<Info />}/>
         <Route path="/shop" element={<Shop/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/registration" element={<Registration/>}/>
-        <Route path="/cartpage" element={<CartPage/>}/>
+        <Route path="/login" element={useLogin(<Login/>)}/>
+        <Route path="/registration" element={useLogin(<Registration/>)}/>
+        <Route path="/cartpage" element={useLoginGuard(<CartPage/>)}/>
         <Route path="/registrationsuccess" element={<RegistrationSuccess/>}/>
-        <Route path="//activate/:uid/:token" element={<Activation/>}/>
+        <Route path="/activate/:uid/:token" element={<Activation/>}/>
+        <Route path="*" element={<h1>404</h1>} />
+        <Route path="/myorderpage" element={useLoginGuard(<MyOrderPage/>)}/>
+        <Route path="/reset_password" element={<ResetPassword/>}/>
+        <Route path="/password/reset/confirm/:uid/:token" element={<ConfirmPassword />}/>
     </Routes>
     )
 }
+const useLoginGuard = (component: ReactNode) => {
+    const { user } = useContext(Context);
+
+    if (user) {
+        return component;
+    } else {
+        return <Navigate to="/login" />;
+    }
+};
+const useLogin = (component: ReactNode) => {
+    const { user } = useContext(Context);
+
+    if (user) {
+        return <Navigate to="/"/>;
+    } else {
+        return component
+    }
+};

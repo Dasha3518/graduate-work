@@ -11,12 +11,24 @@
     outline: 0;
     outline-offset: 0;
 }
+.password{
+    width: 459px;
+    height: 55px;
+    background: #E9E9E9;
+    border-radius: 90px;
+    font-size: 35px;
+    padding-left: 15px;
+    color: #F05334;
+    border-color: #F05334;
+    outline: 0;
+    outline-offset: 0;
+}
 
 .footerinput{
     outline: 0;
     outline-offset: 0;
     padding-left: 15px;
-    width: 352px;
+    width: 344px;
     height: 70px;
     font-family: 'Maven Pro';
     font-style: normal;
@@ -29,6 +41,27 @@
     background: #E9E9E9;
     border-radius: 80px;
     margin-right: 10px;
+}
 
+.comment{
+    width: 300px;
+    height: 50px;
+    background: #f3f1dd;
+    font-size: 18px;
+    font-weight: 200;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.textarea{
+    width: 400px;
+    height: 150px;
+    background: #f3f1dd;
+    font-size: 18px;
+    font-weight: 200;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: auto;
+    margin-left: 20px;
 }
 

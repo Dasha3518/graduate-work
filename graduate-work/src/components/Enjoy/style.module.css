@@ -18,50 +18,35 @@
     background: #F2DB99;
     width: 100%;
     padding-top: 50px;
+    color: #F05334;
+    font-family: 'Maven Pro';
+    font-style: normal;
 }
 
 .blogText{
     width: 570px;
-    height: 607px;
-    font-family: 'Maven Pro';
-    font-style: normal;
-    font-weight: 900;
+    height: 200px;
+    font-weight: 500;
     font-size: 24px;
     line-height: 36px;
     text-align: justify;
-    color: #F05334;
 }
 .blogTitle{
     width: 100%;
-height: 200px;
-font-family: 'Maven Pro';
-font-style: normal;
-font-weight: 900;
-font-size: 86px;
-line-height: 113px;
-text-align: right;
-padding-right: 48px;
-color: #F05334;
+    height: 200px;
+    font-weight: 900;
+    font-size: 86px;
+    line-height: 113px;
+    text-align: right;
+    padding-right: 48px;
 }
 .lemonad{
     margin-bottom: 80px;
     width: 574px;
     height: 682px;
 }
-
-.blogEnjoyButton{
-    text-align: center;
-}
 .enjoy{
     margin-bottom: 80px;
     width: 649px;
     height: 489px;
-}
-.citrus{
-    width: 100%;
-}
-.vector{
-    width: 100%;
-    height: 257px;
-    /* position: absolute; */
 }

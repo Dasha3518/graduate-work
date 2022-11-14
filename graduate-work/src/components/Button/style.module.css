@@ -90,3 +90,39 @@ border: none;
 .transparentPing:hover{
     border: 8px solid #F05334;
 }
+
+.logout{
+    width: 70%;
+    height: 50px;
+    background: #F2DB99;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Maven Pro';
+    font-weight: 700;
+    font-size: 25px;
+    color: #F05334;
+    margin-right: 190px;
+}
+
+.productButton {
+    width: 272px;
+    height: 79px;
+    background: #FDC0AA;
+    border: 3px solid #F05334;
+    border-radius: 80px;
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 38px;
+    text-align: center;
+    color: #F05334;
+}
+.productButton:hover{
+    border: 3px solid #b95c4a;
+    color: #b95c4a ;
+}
+.productButton:active{
+    border: 3px solid #ff2a00;
+    color: #ff2a00 ;
+}

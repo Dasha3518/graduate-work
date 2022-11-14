@@ -1,4 +1,5 @@
 import { Product } from "../components/Products/products.slice";
+import { Comment } from "../components/Comment/comment.slice";
 
 const validateProduct = (product: Product): Promise<Product> => new Promise((resolve, reject) => setTimeout(() => {
     if(product.title.length === 0){
@@ -11,3 +12,13 @@ const validateProduct = (product: Product): Promise<Product> => new Promise((res
 }, 500))
 
 export default validateProduct;
+
+export const validateComment = (comment: Comment): Promise<Comment> => new Promise((resolve, reject) => setTimeout(() => {
+    if(comment.username.length === 0){
+        reject('No user')
+    }
+    if(comment.text.length === 0){
+        reject('No text')
+    }
+    resolve(comment)
+}, 500))

@@ -1,7 +1,7 @@
 import { ChangeEventHandler } from 'react';
 import styles from './style.module.css';
 
-type InputColorType = 'form'| 'footerinput'; 
+type InputColorType = 'form'| 'footerinput' | 'password' | 'comment' | 'textarea'; 
 interface Input {
         value?: string;
         placeholder?: string;
@@ -16,6 +16,7 @@ interface Input {
         type: InputColorType;
         minLength?: number;
         maxLength?: number;
+        
     }
 
 const getInputStyle =(type: InputColorType) => {
@@ -24,6 +25,15 @@ const getInputStyle =(type: InputColorType) => {
     }
     if (type === 'footerinput'){
         return styles.footerinput;
+    }
+    if(type === 'password'){
+        return styles.password
+    }
+    if(type === 'comment'){
+        return styles.comment
+    }
+    if(type === 'textarea'){
+        return styles.textarea
     }
 }
 

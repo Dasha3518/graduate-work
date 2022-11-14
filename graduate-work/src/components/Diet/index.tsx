@@ -1,11 +1,17 @@
 import style from './style.module.css';
 import { blogbottle, line} from '../../assets';
 import { Button } from '../Button';
+import { useNavigate } from 'react-router-dom';
+import { Container } from '../Container';
 
 export const DietJuice = () => {
+    const navigate = useNavigate()
+    const navigateToShop = () => {
+        navigate("/shop")
+    }
     return (
             <div className={style.blogDiet}>
-                <div className={style.container}>
+                <Container>
                     <div className={style.blogContent}>
                         <div className={style.blogBottle}>
                             <img src={blogbottle} alt="" className={style.bottle} />
@@ -21,9 +27,9 @@ export const DietJuice = () => {
                         </div>
                     </div>
                     <div className={style.blogButton}>
-                        <Button type="transparent" text={"Shop Now"}/>
+                        <Button type="transparent" text={"Shop Now"} onClick={navigateToShop}/>
                     </div>
-                </div>
+                </Container>
             </div>
     )
 }
