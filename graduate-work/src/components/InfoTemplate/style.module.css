@@ -1,0 +1,22 @@
+.template{
+    height: 100vh;
+    background: #f2db998f;
+    width: 100%;
+    font-family: 'Maven Pro';
+    font-style: normal;
+}
+
+.text{
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 37px;
+    line-height: 72px;
+    text-align: center;
+    color: #F05334;
+    margin-bottom: 70px;
+}
+button {
+    margin: 0 auto;
+    display: block;
+}

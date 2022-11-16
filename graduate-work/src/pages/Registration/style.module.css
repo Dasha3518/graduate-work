@@ -1,0 +1,35 @@
+.container {
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.active_link {
+
+    color: #F05334;
+text-decoration: none;
+    width: 300px;
+
+}
+.normal {
+    color: #f053345e;
+    text-decoration: none;
+    width: 130px;
+}
+.loginpage{
+    background: #f2db998f;
+    height: 100vh;
+    text-align: center;
+}
+.registrationTtitle{
+    font-family: 'Raleway';
+    font-weight: 700;
+    line-height: 145.2%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    font-size: 45px;
+    padding: 30px;
+}
+.registrationTtitle span{
+    color: #F05334;
+}

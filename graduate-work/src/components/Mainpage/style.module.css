@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main {
+    width: 100%;
+    background: #FDC0AA;
+    height: 1051px;
+    font-family: 'Merienda One';
+    font-style: normal;
+}
+.container {
+    height: 100%;
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+}
+.grapefruit{
+    width: 100%;
+    height: 870px;
+}
+.main__banner {
+    width: 850px;
+    height: 399px;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 131.4%;
+    padding-top: 27px;
+    color: #F05334;
+}
+.main__title{
+    margin-bottom: 50px;
+    padding-top: 100px;
+}
+.main__text{
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 121.4%;
+    margin-bottom: 65px;
+}
+.bottle{
+    position: absolute;
+    transform: rotate(-0.44deg);
+    bottom: 7px
+}
+.main button {
+    z-index: 3;
+    margin: inherit;
+}

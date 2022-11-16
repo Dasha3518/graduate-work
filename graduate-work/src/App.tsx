@@ -1,26 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
+import { RootRouter } from './router';
+import { createContext, useState } from 'react';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import { IUser } from './types/auth';
+import { getUser } from './api/auth';
+
+
+
+
+export const Context = createContext<{
+  user:   IUser | null;
+  setUser: (value:  null) => void;
+}>({
+  user: null,
+  setUser: (value: IUser | null) => {},
+});
+const access = localStorage.getItem("access");
 
 function App() {
+  const [user, setUser] = useState<IUser | null>(null);
+  useEffect(() => {
+    let isOk = true;
+
+    if (access) {
+      getUser()
+        .then((response) => {
+          if (response.ok) {
+            isOk = true;
+          } else {
+            isOk = false;
+          }
+          return response.json(); 
+        })
+        .then((json) => {
+          if (isOk) {
+            setUser(json);
+          }
+        })
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Context.Provider value={{ user: user,setUser: setUser }}>
+          <RootRouter/>
+        </Context.Provider>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
 export default App;
+
+

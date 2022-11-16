@@ -1,0 +1,58 @@
+.container {
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.footer{
+    height: 505px;
+
+background: #F05334;
+}
+.footerContent{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 15px;
+    padding-top: 100px;
+}
+.footerList{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-gap: 15px;
+
+}
+.footer a{
+    font-family: 'Maven Pro';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 58px;
+color: #E9E0DE;
+text-decoration: none;
+display: block;
+margin-bottom: 15px;
+}
+.footerListMenu{
+    list-style-type: none;
+}
+
+.sale{
+    font-family: 'Merienda One';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 121.4%;
+padding-right: 50px;
+
+text-align: right;
+
+color: #F9E2DA;
+margin-bottom: 50px;
+}
+.profile{
+    padding-top: 40px;
+    margin-left: 255px;
+}
+.form {
+    display: flex;
+}

@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 147px;
+    background: #FDC0AA;
+}
+.container {
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    justify-content: center;
+}
+.registrationBlog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 41px;
+    text-align: center;
+}
+.inputText {
+    font-size: 35px;
+    color: #F05334;
+    margin-bottom: 10px;
+}
+
+.textErrorForm{
+    color: red;
+    height: 20px;
+}
+.registrationBlog a{
+    width: 100%;
+    height: auto;
+}

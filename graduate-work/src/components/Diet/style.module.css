@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.blogDiet{
+    height: 970px;
+    background: #F2DB99;
+    width: 100%;
+    font-family: 'Maven Pro';
+    font-style: normal;
+    color: #F05334;
+}
+.blogInformation{
+    width: 440px;
+    text-align: inherit;
+    padding-top: 95px;
+}
+.blogContent{
+    display: flex;
+}
+.blogTitle{
+    width: 555px;
+    height: 332px;
+    font-weight: 700;
+    font-size: 86px;
+    line-height: 113px;
+    margin-bottom: 45px;
+}
+
+.blogText{
+    width: 520px;
+    height: 312px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+
+}
+.blogBottle{
+    width: 629px;
+    position: relative;
+}
+.bottle{
+    position: absolute;
+    top: 116px;
+}
+.line{
+    position: absolute;
+    left: 260px;
+    top: 250px;
+    width: 334.31px;
+    height: 301.06px;
+}
+.blogButton{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+

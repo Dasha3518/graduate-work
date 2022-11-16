@@ -1,0 +1,58 @@
+.packsshop {
+    width: 100%;
+    background: #FDC0AA;
+    font-family: 'Maven Pro';
+    font-style: normal;
+    color: #F05334;
+    text-align: center;
+    line-height: 35px;
+}
+.container {
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px 15px;
+}
+.packsshopBottle img {
+    width: 256px;
+    height: 367px;
+    margin-bottom: 20px;
+}
+.packsshopBottle h3{
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 20px;
+    height: 53px;
+}
+.packsshopBottle h5{
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    height: 80px;
+}
+.packsshopBottle h4{
+    font-size: 35px;
+    margin-bottom: 50px;
+    margin-right: 65px;
+    width: 100%;
+}
+.card{
+    padding-top: 128px;
+}
+.iconsingle{
+    height: 460px;
+    padding-top: 163px;
+}
+.fff {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+.price{
+    display: flex;
+    width: 270px;
+    margin: 0 auto;
+}
+.price button{
+    height: 45px;
+    font-size: 22px;
+}

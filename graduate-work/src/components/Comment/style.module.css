@@ -1,0 +1,99 @@
+.comment{
+    background: #F2DB99;
+    width: 100%;
+    padding-top: 50px;
+}
+.backbottle{
+    position: absolute;
+    z-index: 0;
+    width: 834px;
+    right: 1px;
+}
+.container{
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 65% 45%;
+}
+.comments{
+    background: #efeabe;
+    border-radius: 30px;
+    width: 700px;
+    margin-bottom: 50px;
+    padding: 20px;
+    overflow: auto;
+    height: 300px;
+    position: relative;
+    
+}
+.comments li{
+    text-decoration: none;
+    list-style-type: none;
+}
+.commentList{
+    border-bottom: 2px solid #d3c7c7;
+    display: grid;
+    padding: 10px;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 40% 60%;
+    position: relative;
+
+}
+.inputform{
+    height: 300px;
+    width: 100%;
+    border-radius: 30px;
+    padding: 10px;
+    background: #efeabe;
+    position: relative;
+}
+.inputform button {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 200;
+}
+.userlist{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    text-align: center;
+}
+.text{
+    grid-column: 2;
+}
+.username{
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 400;
+}
+textarea{
+    width: 400px;
+    height: 157px;
+    background: #f3f1dd;
+    font-size: 18px;
+    font-weight: 200;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: auto;
+    margin-left: 20px;
+    padding: 10px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #f05334;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #f05334b0; 
+}
