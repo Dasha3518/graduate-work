@@ -15,6 +15,9 @@
     background: none;
     cursor: pointer;
     border: none;
+    display: flex;
+    width: 588px;
+    justify-content: end;
 }
 .container {
     width: 621px;
@@ -30,6 +33,9 @@
 }
 .logo{
     margin: 0px auto 40px auto;
+    /* margin: 0 auto; */
+    width: 45%;
+    display: block;
 } 
 .menu {
     display: flex;

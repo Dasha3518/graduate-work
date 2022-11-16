@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router-dom';
 import { Container } from '../Container';
 
 export const Enjoy= () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const navigateToShop = () => {
         navigate("/shop")
-    }
+    };
     
     return(
         <div className={style.blogEnjoy}>
@@ -32,4 +32,4 @@ export const Enjoy= () => {
                 </Container>
         </div>
     )
-}
+};

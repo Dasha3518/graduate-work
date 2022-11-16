@@ -19,6 +19,6 @@ export const Healthy= () => {
                 <Button type="primary" text={"Shop The Flavors"} onClick={navigateToShop}/>
                 <img src={jumji} alt="" className={style.jumji} />
             </Container>
-    </div>
+        </div>
     )
 }

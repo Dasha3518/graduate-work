@@ -1,23 +1,23 @@
 import { ChangeEventHandler } from 'react';
 import styles from './style.module.css';
 
-type InputColorType = 'form'| 'footerinput' | 'password' | 'comment' | 'textarea'; 
+type InputColorType = 'form'| 'footerinput' | 'password' | 'comment'; 
 interface Input {
-        value?: string;
-        placeholder?: string;
-        refObj?: any;
-        onChange?: ChangeEventHandler<HTMLInputElement>;
-        onFocus?: () => void;
-        onBlur?: () => void;
-        error?: string;
-        name?: string;
-        required?: boolean;
-        pattern?: string;
-        type: InputColorType;
-        minLength?: number;
-        maxLength?: number;
-        
-    }
+    value?: string;
+    placeholder?: string;
+    refObj?: any;
+    onChange?: ChangeEventHandler<HTMLInputElement>;
+    onFocus?: () => void;
+    onBlur?: () => void;
+    error?: string;
+    name?: string;
+    required?: boolean;
+    pattern?: string;
+    type: InputColorType;
+    minLength?: number;
+    maxLength?: number;
+    
+}
 
 const getInputStyle =(type: InputColorType) => {
     if (type === 'form'){
@@ -31,9 +31,6 @@ const getInputStyle =(type: InputColorType) => {
     }
     if(type === 'comment'){
         return styles.comment
-    }
-    if(type === 'textarea'){
-        return styles.textarea
     }
 }
 
@@ -58,5 +55,5 @@ export const Input = (props: Input) => {
             ></input>
             <p style={{ color: "red" }}>{props.error}</p>
         </label>
-        );
+    );
 };

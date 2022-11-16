@@ -22,7 +22,6 @@ const access = localStorage.getItem("access");
 
 function App() {
   const [user, setUser] = useState<IUser | null>(null);
-  const [isReady, setIsReady] = useState(!access);
   useEffect(() => {
     let isOk = true;
 
@@ -34,17 +33,13 @@ function App() {
           } else {
             isOk = false;
           }
-
-          return response.json(); //чёт ругается на неавторизованного пользователя, надо разобраться
+          return response.json(); 
         })
         .then((json) => {
           if (isOk) {
             setUser(json);
           }
         })
-        .finally(() => {
-          setIsReady(true);
-        });
     }
   }, []);
 

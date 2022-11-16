@@ -9,9 +9,9 @@ import { Activation } from "../pages/Activation";
 import { CartPage } from "../pages/CartPage/CartPage";
 import { ReactNode, useContext } from "react";
 import { Context } from "../App";
-import { MyOrderPage } from "../pages/MyOrders";
 import { ResetPassword } from "../pages/ResetPassword";
 import { ConfirmPassword } from "../pages/ConfirmPassword";
+import { Title } from "../components/Title";
 
 
 export const RootRouter = () => {
@@ -25,8 +25,7 @@ export const RootRouter = () => {
         <Route path="/cartpage" element={useLoginGuard(<CartPage/>)}/>
         <Route path="/registrationsuccess" element={<RegistrationSuccess/>}/>
         <Route path="/activate/:uid/:token" element={<Activation/>}/>
-        <Route path="*" element={<h1>404</h1>} />
-        <Route path="/myorderpage" element={useLoginGuard(<MyOrderPage/>)}/>
+        <Route path="*" element={<Title text="404"/>} />
         <Route path="/reset_password" element={<ResetPassword/>}/>
         <Route path="/password/reset/confirm/:uid/:token" element={<ConfirmPassword />}/>
     </Routes>

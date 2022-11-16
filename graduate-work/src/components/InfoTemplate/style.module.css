@@ -1,25 +1,9 @@
 .template{
-    height: 970px;
-    background: #F2DB99;
+    height: 100vh;
+    background: #f2db998f;
     width: 100%;
-}
-.container {
-    height: 100%;
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-
-.title {
     font-family: 'Maven Pro';
     font-style: normal;
-    font-weight: 700;
-    font-size: 77px;
-    line-height: 113px;
-    text-align: center;
-    color: #F05334;
-    margin-bottom: 50px;
 }
 
 .text{

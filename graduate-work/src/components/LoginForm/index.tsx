@@ -1,6 +1,6 @@
 import style from  './style.module.css';
 import { Input } from "../Input"
-import {  useState, useContext, ChangeEventHandler, FormEventHandler, useRef } from "react";
+import {  useState, useContext, ChangeEventHandler, FormEventHandler} from "react";
 import { Button } from '../Button';
 import { getUser, login } from '../../api/auth';
 import { Context } from '../../App';

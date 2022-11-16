@@ -2,12 +2,10 @@ import { createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit'
 import { validateComment } from '../../api/fake.api';
 import { icocomment } from '../../assets';
 import { RootState } from '../../redux/store';
-// import { RootState } from '../../store'
 
 export const generateUniqId = () => {
     return '_' + Math.random().toString(16).slice(2)
 }
-
 export interface Comment{
     username: string,
     text: string,
@@ -70,12 +68,7 @@ const commentSlice = createSlice({
     reducers:{
         addComment: (state, action: PayloadAction<Comment>) => {
             state.comments.push(action.payload)
-        },
-
-        // removeComment: (state, action: PayloadAction<number>) => ({
-        //     ...state,
-        //     comments: state.comments.filter(comment => comment.id !== action.payload)  
-        // })       
+        },     
     },
     extraReducers: builder => {
         builder.addCase(addCommentAsync.fulfilled, (state, action) => ({
@@ -96,10 +89,7 @@ const commentSlice = createSlice({
         }))
     }
 })
-//export const {addComment, removeComment} = commentSlice.actions;
 export const {addComment} = commentSlice.actions;
-
 export const getCommentSelector = (state: RootState) => state.comments.comments;
-// export const getErrorMessage = (state: RootState) => state.comments.errorMessage;
 
 export default commentSlice.reducer;

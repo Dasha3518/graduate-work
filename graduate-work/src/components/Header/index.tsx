@@ -8,7 +8,7 @@ import { getTotal } from '../Cart/cart.slice';
 import { Context } from '../../App';
 
 export const Header = () => {
-    const totalAmout = useAppSelector(getTotal)
+    const totalAmout = useAppSelector(getTotal);
     const [burgerMenu, setBurgerMenu] = useState(false);
     const { user, setUser } = useContext(Context);
 
@@ -21,7 +21,7 @@ export const Header = () => {
     const navigate = useNavigate();
     const navigateToHome = () => {
         navigate("/")
-    }
+    };
 
 
 

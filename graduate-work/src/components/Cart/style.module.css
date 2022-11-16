@@ -1,9 +1,12 @@
 .cart{
     width: 100%;
-    background: #F2DB99;
     min-height: 1060px;
     max-height: 1750px;
     height: 100%;
+    color: #F05334;
+    font-family: 'Maven Pro';
+    font-style: normal;
+    background: #F2DB99;
 }
 .container {
     height: 100%;
@@ -11,59 +14,50 @@
     margin: 0 auto;
     padding: 50px 15px;
 }
-.cart h2 {
-font-family: 'Maven Pro';
-font-style: normal;
-font-weight: 900;
-font-size: 60px;
-line-height: 35px;
-color: #F05334;
+.titleCart{
+    font-weight: 900;
+    font-size: 50px;
+    margin-bottom: 50px;
 }
 .cart h5{
-font-family: 'Maven Pro';
-font-style: normal;
-font-weight: 600;
-font-size: 30px;
-line-height: 35px;
-color: #F05334;
-text-align: right;
-margin-bottom: 50px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: right;
+    margin-bottom: 55px;
 }
 
-.cartli {
-    background: #fff;
-    border-radius: 30px;
+.nameTable{
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    text-align: center;
+    border-bottom: 2px solid #f05334;
+    margin-bottom: 20px;
+    height: 52px;
 }
-.cartli li{
+.nameTable h3{
+    font-size: 40px;
+    font-weight: 500;
+}
+.cart form{
     padding: 20px;
-    text-decoration: none;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: 52% 25% 23%;
+    align-items: center;
+}
+span img {
+    width:100px;
+    margin-right: 67px;
+    margin-left: 69px;
+}
+
+.cart span {
     display: flex;
     align-items: center;
-    border-bottom: 2px solid #d3c7c7;
+    width: 100%;
 }
-.cartli span{
-font-family: 'Maven Pro';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 25px;
-color: #F05334;
-width: 350px;
-display: flex;
-align-items: center;
-}
-.cartli button{
-    width: 200px;
-    height: 60px;
-    font-weight: 400;
-font-size: 20px;
-}
-.cartli img {
-    width:65px
-}
-.cartli h3{
-    font-size: 30px;
+.price{
+    width: 100%;
+    text-align: center;
 }

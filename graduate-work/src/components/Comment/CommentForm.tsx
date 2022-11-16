@@ -1,5 +1,4 @@
 import {useState } from 'react'
-import { json } from 'react-router';
 import { icocomment } from '../../assets';
 import { useAppDispatch } from '../../redux/store.hooks';
 import { Button } from '../Button';
@@ -24,6 +23,11 @@ const handleChange = ({target:{name, value}}: React.ChangeEvent<HTMLInputElement
         (newValue as any)[name] = value;
         return newValue;
     })
+    const handleChangeText = ({target:{name, value}}: React.ChangeEvent<HTMLTextAreaElement>) => setComment(prev =>{
+        const newValue = {...prev};
+        (newValue as any)[name] = value;
+        return newValue;
+    })
     
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -32,7 +36,8 @@ const handleChange = ({target:{name, value}}: React.ChangeEvent<HTMLInputElement
         localStorage.setItem(`comment ${comment.id}`,JSON.stringify({comment}))
         dispatch(addCommentAsync(comment))
         console.log(comment)
-        setComment({id: '', 
+        setComment({
+        id: '', 
         text: '',
         username: '',
         image: icocomment})
@@ -50,11 +55,11 @@ const handleChange = ({target:{name, value}}: React.ChangeEvent<HTMLInputElement
                 value = {username} 
                 onChange = {handleChange}
             />
-            <Input
-                type="textarea" 
-                name='text' 
+
+            <textarea 
+                name="text" 
                 value = {text} 
-                onChange = {handleChange}
+                onChange={handleChangeText}
             />
             <Button  btnType="submit"  text='Add a Comment' type='primary' onClick={handleSubmit}/>
         </form>

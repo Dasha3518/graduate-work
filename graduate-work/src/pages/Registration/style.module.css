@@ -5,40 +5,31 @@
     padding: 0 15px;
 }
 .active_link {
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 145.2%;
-    letter-spacing: 0.03em;
+
     color: #F05334;
-    text-align: center;
+text-decoration: none;
     width: 300px;
-    padding: 40px;
-    
+
 }
 .normal {
-    color: #f0533463;
+    color: #f053345e;
+    text-decoration: none;
+    width: 130px;
+}
+.loginpage{
+    background: #f2db998f;
+    height: 100vh;
+    text-align: center;
+}
+.registrationTtitle{
     font-family: 'Raleway';
     font-weight: 700;
-    font-size: 45px;
     line-height: 145.2%;
     letter-spacing: 0.03em;
     text-align: center;
-    width: 130px;
-    padding: 40px;
-}
-.wand {
     font-size: 45px;
-    display: contents;
-    color: #f053345e;
-} 
-.loginpage{
-    background: #f2db998f;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    padding: 30px;
+}
+.registrationTtitle span{
+    color: #F05334;
 }

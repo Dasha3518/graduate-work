@@ -1,4 +1,3 @@
-
 import { Input } from '../Input';
 import style from  './style.module.css';
 import { ChangeEventHandler, useState } from 'react'
@@ -6,13 +5,13 @@ import { Button } from '../Button';
 import { profile } from '../../assets';
 
 export const Footer = () => {
-    const[text, setText] = useState('');
+    const [email, setEmail] = useState("");
 
-    const submit = () => {
-        };
-
-    const handleOnChange: ChangeEventHandler<HTMLInputElement>= (event) => {
-        setText(event.target.value);
+    const handleEmail: ChangeEventHandler<HTMLInputElement> = (event) => {
+        setEmail(event.target.value);
+    };
+    const clickAlert = () => {
+        alert("")
     }
 
     return(
@@ -69,10 +68,9 @@ export const Footer = () => {
                     <div>
                         <h4 className={style.sale}>Sign up to get 10% off your first order</h4>
                         <div className={style.form}>
-                            <Input onChange={handleOnChange} value={text} type='footerinput' placeholder='Email Address'/>
-                            <Button type="footerbutton" onClick={submit} text={"Subscribe"}/>
+                            <Input onChange={handleEmail} value={email} type='footerinput' placeholder='Email Address'/>
+                            <Button type="footerbutton" onClick={clickAlert} text={"Subscribe"}/>
                         </div>
-
                         <img src={profile} alt="" className={style.profile}/>
                     </div>
                 </div>

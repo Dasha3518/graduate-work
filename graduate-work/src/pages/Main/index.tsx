@@ -5,8 +5,8 @@ import { Mainpage } from "../../components/Mainpage";
 export const Main = () => {
     return (
         <>
-        <Header />            
-        <Mainpage/>
+            <Header />            
+            <Mainpage/>
         </>
     );    
 };

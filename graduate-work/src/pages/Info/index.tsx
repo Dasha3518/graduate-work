@@ -8,17 +8,16 @@ import { Olipop } from "../../components/Olipop";
 import { Sample } from "../../components/Sample";
 
 export const Info = () => {
-        
     return (
         <>
-        <Header/>
-        <DietJuice />
-        <Healthy/>
-        <Sample/>
-        <Olipop/>
-        <Enjoy/>
-        <CommentAll/>
-        <Footer/>
+            <Header/>
+            <DietJuice />
+            <Healthy/>
+            <Sample/>
+            <Olipop/>
+            <Enjoy/>
+            <CommentAll/>
+            <Footer/>
         </>
     );
-    };
+};

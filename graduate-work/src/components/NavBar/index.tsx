@@ -3,8 +3,6 @@ import style from './style.module.css';
 import { cross, logopic, logoutpic} from '../../assets';
 import { useContext } from 'react';
 import { Context } from '../../App';
-import { Button } from '../Button';
-
 
 interface IProps {
     onClose?: () => void;
@@ -29,11 +27,10 @@ export const NavBar = ({ onClose }: IProps)  => {
                     {user ? <button onClick={logout} className={style.buttonLogout}>
                     <img src={logoutpic} alt="" />
                 </button> : null}
-                        <img src={logopic} alt=""  className={style.logo}/>
                         <button  className={style.close} onClick={onClose}>
                             <img src={cross} alt="" />
                         </button>
-                    </div>
+                    </div><img src={logopic} alt=""  className={style.logo}/>
                     <ul>
                     {user ? (
                         <>
@@ -45,9 +42,6 @@ export const NavBar = ({ onClose }: IProps)  => {
                             </li>
                             <li>
                             <Link to="/cartpage">Cart</Link>
-                            </li>
-                            <li>
-                                <Link to="/myorderpage">My orders</Link>
                             </li>
                         </>
                         ) : (
@@ -61,9 +55,6 @@ export const NavBar = ({ onClose }: IProps)  => {
                         </>
                         )}
                     </ul>
-                </div>
-                <div className={style.logout}>
-
                 </div>
             </div>
         </div>

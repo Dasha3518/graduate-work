@@ -7,7 +7,7 @@ export const Mainpage = () => {
     const navigate = useNavigate();
     const navigateToShop = () => {
         navigate("/shop")
-    }
+    };
 
     return(
         <main className={style.main}>

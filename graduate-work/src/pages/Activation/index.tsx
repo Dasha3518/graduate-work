@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { activateUser } from "../../api/auth";
-import { Container } from "../../components/Container";
 import { Header } from "../../components/Header";
 import { InfoTemplate } from "../../components/InfoTemplate";
 
@@ -16,17 +15,17 @@ export const Activation = () => {
     }, []);
 
     return (
-        <Container>
-        <Header />
-        <InfoTemplate
-            title={"Activation was successful"}
-            textBtn="Login"
-            onClick={() => {
-            navigate("/login");
-            }}
-        >
-            You can log into your account
-        </InfoTemplate>
-        </Container>
+        <>
+            <Header />
+            <InfoTemplate
+                title={"Activation was successful"}
+                textBtn="Login"
+                onClick={() => {
+                navigate("/login");
+                }}
+            >
+                You can log into your account
+            </InfoTemplate>
+        </>
     );
 };

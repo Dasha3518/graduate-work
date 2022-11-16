@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { ChangeEventHandler, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { confirmPassword } from "../../api/auth";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import { NotificationManager } from "react-notifications";
 import { InfoTemplate } from "../../components/InfoTemplate";
+import { validatePassword } from "../../utils/validation";
 
     export const ConfirmPassword = () => {
     const [password, setPassword] = useState("");
     const { uid, token } = useParams<{ uid: string; token: string }>();
+    const [passwordError, setPasswordError] = useState("");
     const navigate = useNavigate();
 
     const handleConfirmPassword = () => {
@@ -22,6 +24,18 @@ import { InfoTemplate } from "../../components/InfoTemplate";
         });
         }
     };
+    const handlePassword: ChangeEventHandler<HTMLInputElement> = (event) => {
+        setPassword(event.target.value);
+    };
+    
+    const handlePasswordlBlur = () => {
+        const error = validatePassword(password);
+        setPasswordError(error);
+    };
+    
+    const handlePasswordlFocus = () => {
+        setPasswordError("");
+    };
 
     return (
         <>
@@ -33,8 +47,12 @@ import { InfoTemplate } from "../../components/InfoTemplate";
             >
                 <Input
                     value={password}
-                    onChange={(event) => setPassword(event.target.value)} 
-                    type={"password"}               
+                    type={"password"}   
+                    placeholder="Password" 
+                    onChange={handlePassword}
+                    onBlur={handlePasswordlBlur}
+                    onFocus={handlePasswordlFocus}  
+                    error={passwordError}         
                 />
             </InfoTemplate>
         </>

@@ -19,18 +19,19 @@ import bottle2 from './images/bottle2.png';
 import bottle3 from './images/bottle3.png';
 import bottle4 from './images/bottle4.png';
 import card from './images/card.png';
-import tropicalgrepefruit from './images/tropicalgrepefruit.png'
-import vintagepineapple from './images/vintagepineapple.png'
-import orangecream from './images/orangecream.png'
-import grepefruiftvanilla from './images/grepefruiftvanilla.png'
-import gingerlemon from './images/gingerlemon.png'
-import classiclime from './images/classiclime.png'
-import iconsingle from './images/iconsingle.png'
-import olipopvector from './images/olipopvector.png'
-import seller from './images/seller.png'
-import cross from './images/cross.png'
-import icocomment from './images/icocomment.png'
-import logoutpic from './images/exit.png'
+import tropicalgrepefruit from './images/tropicalgrepefruit.png';
+import vintagepineapple from './images/vintagepineapple.png';
+import orangecream from './images/orangecream.png';
+import grepefruiftvanilla from './images/grepefruiftvanilla.png';
+import gingerlemon from './images/gingerlemon.png';
+import classiclime from './images/classiclime.png';
+import iconsingle from './images/iconsingle.png';
+import olipopvector from './images/olipopvector.png';
+import seller from './images/seller.png';
+import cross from './images/cross.png';
+import icocomment from './images/icocomment.png';
+import logoutpic from './images/exit.png';
+import cartnull from './images/cartnull.png';
 
 export {
     logopic, ico, basket, bottle, grapefruit,
@@ -39,5 +40,5 @@ export {
     bottle1, bottle2, bottle3, bottle4, card, tropicalgrepefruit,
     vintagepineapple, orangecream, grepefruiftvanilla, gingerlemon,
     classiclime, iconsingle, olipopvector, seller,cross, icocomment,
-    logoutpic
+    logoutpic, cartnull
 };

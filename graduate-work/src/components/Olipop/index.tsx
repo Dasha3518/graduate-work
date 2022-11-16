@@ -2,13 +2,12 @@ import { bottle2, seller, vector } from '../../assets';
 import style from  './style.module.css';
 import { Button } from '../Button';
 import { useNavigate } from 'react-router-dom';
-import { Container } from '../Container';
 
 export const Olipop = () => {
     const navigate = useNavigate();
     const navigateToShop = () => {
         navigate("/shop")
-    }
+    };
     return(
         <div className={style.olipop}> 
             <div className={style.container}>

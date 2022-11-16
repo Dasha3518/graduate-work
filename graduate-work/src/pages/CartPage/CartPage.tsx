@@ -4,8 +4,8 @@ import { Header } from "../../components/Header"
 export const CartPage = () => {
     return (
         <>
-        <Header/>
-        <Cart />
+            <Header/>
+            <Cart />
         </>
     )
 }
